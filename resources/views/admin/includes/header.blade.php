@@ -23,21 +23,6 @@
 					<i data-feather="align-left"></i>
 			    </a>
 			</li>
-			<li class="btn-group nav-item d-none d-xl-inline-block">
-				<a href="contact_app_chat.html" class="waves-effect waves-light nav-link svg-bt-icon btn-primary-light" title="Chat">
-					<i data-feather="message-circle"></i>
-			    </a>
-			</li>
-			<li class="btn-group nav-item d-none d-xl-inline-block">
-				<a href="mailbox.html" class="waves-effect waves-light nav-link svg-bt-icon btn-primary-light" title="Mailbox">
-					<i data-feather="at-sign"></i>
-			    </a>
-			</li>
-			<li class="btn-group nav-item d-none d-xl-inline-block">
-				<a href="extra_taskboard.html" class="waves-effect waves-light nav-link svg-bt-icon btn-primary-light" title="Taskboard">
-					<i data-feather="clipboard"></i>
-			    </a>
-			</li>
 		</ul> 
 	  </div>
 		
