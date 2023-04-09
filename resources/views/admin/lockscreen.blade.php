@@ -31,19 +31,26 @@
 						<div class="bg-white rounded10 shadow-lg">
 							<div class="content-top-agile p-20">
 								<img src="{{asset('admin/images/avatar/2.jpg')}}" alt="User Image" class="rounded-circle">
-								<h3 class="mb-0">Maical Doe</h3>								
+								<h3 class="mb-0">Admin</h3>								
 							</div>
 							<div class="p-40">
-								<form action="#" method="post">
+								<form action="{{ route('authenticate') }}" method="post">
+									@csrf
 									<div class="form-group">
 										<div class="input-group mb-3">
 											<span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
-											<input type="password" class="form-control ps-15 bg-transparent" placeholder="Password">
+											<input type="hidden" name="username" value="admin">
+											<input type="password" name="password" class="form-control ps-15 bg-transparent" placeholder="Password" required>
 										</div>
 									</div>
 									  <div class="row">
 										<div class="col-12 text-center">
 										  <button type="submit" class="btn btn-info mt-10">SIGN IN</button>
+										</div>
+										<div class="col-12">
+											@if ($errors->has('username'))
+												<span class="text-danger">{{ $errors->first('username') }}</span>
+											@endif
 										</div>
 										<!-- /.col -->
 									  </div>

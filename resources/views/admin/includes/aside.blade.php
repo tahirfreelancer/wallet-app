@@ -7,40 +7,46 @@
 			  <ul class="sidebar-menu" data-widget="tree">
 				<li>
 				  <a href="{{ url('dashboard')}}">
-					<i data-feather="monitor"></i>
+					<i class="glyphicon glyphicon-dashboard"></i>
 					<span>Dashboard</span>
 				  </a>
 				</li>  	 
 				<li>
 				  <a href="{{ url('users')}}">
-					<i data-feather="users"></i>
+					<i class="glyphicon glyphicon-user"></i>
 					<span>Users</span>
 				  </a>
 				</li>  
 				<li>
-				  <a href="{{ url('plans')}}">
-					<i data-feather="users"></i>
+				  <a href="{{ url('dasboardplans')}}">
+					<i class="glyphicon glyphicon-list-alt"></i>
 					<span>Plans</span>
 				  </a>
 				</li>
 				<li>
 				  <a href="{{ url('runing')}}">
-					<i data-feather="feather feather-activity"></i>
+					<i class="glyphicon glyphicon-bullhorn"></i>
 					<span>Running Compaigns</span>
 				  </a>
 				</li>	
 				<li>
 				  <a href="{{ url('withdraw')}}">
-					<i data-feather="users"></i>
+					<i class="glyphicon glyphicon-xbt"></i>
 					<span>withdrawal Requests</span>
 				  </a>
 				</li>  
 				<li>
 				  <a href="{{ url('history')}}">
-					<i data-feather="users"></i>
+					<i class="glyphicon glyphicon-flag"></i>
 					<span>History </span>
 				  </a>
-				</li>       
+				</li>  
+				<li>
+				  <a href="{{ url('logout')}}">
+					<i class="glyphicon glyphicon-off"></i>
+					<span>logout </span>
+				  </a>
+				</li>      
 			  </ul>
 			  
 			  <div class="sidebar-widgets">

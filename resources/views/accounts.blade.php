@@ -24,17 +24,25 @@
 				<div class="col-lg-6 col-12">
 					<div class="box box-body">
 						<ul class="nav nav-tabs nav-fill" role="tablist">
-							<li class="nav-item"> <a class="nav-link active py-10 rounded" data-bs-toggle="tab" href="#login" role="tab">Login</a> </li>
-							<li class="nav-item"> <a class="nav-link py-10 rounded" data-bs-toggle="tab" href="#register" role="tab">Register</a> </li>
+							<li class="nav-item"> <a class="nav-link py-10 rounded <?php echo (isset($_GET['type']) ) ? 'default' : 'active'; ?>  {{ session('register') ?? 'default' }}" data-bs-toggle="tab" href="#login" role="tab">Login</a> </li>
+							<li class="nav-item"> <a class="nav-link py-10 rounded <?php echo (isset($_GET['type']) ) ? 'active' : 'default'; ?>" data-bs-toggle="tab" href="#register" role="tab">Register</a> </li>
 						</ul>
 					</div>
 					<div class="box box-body mb-0">
 						<div class="tab-content">
-							<div class="tab-pane active" id="login" role="tabpanel">
+							<div class="tab-pane <?php echo (isset($_GET['type']) ) ? 'default' : 'active' ?>  {{ session('register') ?? 'default' }}" id="login" role="tabpanel">
 								<div>				
 									<div class="content-top-agile pb-0 pt-20">
 										<h2 class="text-primary">Let's Get Started</h2>
-										<p class="mb-0">Sign in to continue to CryptoCurrency.</p>							
+										<p class="mb-0">Sign in to continue to CryptoCurrency.</p>	
+										@if(session('success'))
+											<div class="alert alert-succes alert-dismissible fade show" role="alert">
+												<strong>Holy guacamole!</strong>{{ session('success') }}
+												<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+										@endif
 									</div>
 									<div class="p-40">
 									<form action="{{ route('authenticate') }}" method="POST">
@@ -42,16 +50,16 @@
 											<div class="form-group">
 												<div class="input-group mb-15">
 													<span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
-													<input type="text" class="form-control ps-15 bg-transparent" placeholder="Username">
-													@if ($errors->has('name'))
-														<span class="text-danger">{{ $errors->first('name') }}</span>
+													<input type="text" class="form-control ps-15 bg-transparent" name="username" placeholder="Username">
+													@if ($errors->has('username'))
+														<span class="text-danger">{{ $errors->first('username') }}</span>
 													@endif
 												</div>
 											</div>
 											<div class="form-group">
 												<div class="input-group mb-15">
 													<span class="input-group-text  bg-transparent"><i class="ti-lock"></i></span>
-													<input type="password" class="form-control ps-15 bg-transparent" placeholder="Password">
+													<input type="password" class="form-control ps-15 bg-transparent" name="password" placeholder="Password">
 													@if ($errors->has('password'))
 														<span class="text-danger">{{ $errors->first('password') }}</span>
 													@endif
@@ -74,13 +82,18 @@
 												<div class="col-12 text-center">
 												  <button type="submit" class="btn btn-info w-p100 mt-15">SIGN IN</button>
 												</div>
+												<div class="col-12">
+													@if ($errors->has('username'))
+														<span class="text-danger">{{ $errors->first('username') }}</span>
+													@endif
+												</div>
 												<!-- /.col -->
 											  </div>
 										</form>	
 									</div>
 								</div>
 							</div>
-							<div class="tab-pane" id="register" role="tabpanel">
+							<div class="tab-pane  <?php echo (isset($_GET['type'])) ? 'active' : 'default'; ?>" id="register" role="tabpanel">
 								<div>									
 									<div class="content-top-agile pb-0 pt-20">
 										<h2 class="text-primary">Get started with Us</h2>
@@ -91,17 +104,8 @@
 										@csrf				
 											<div class="form-group">
 												<div class="input-group mb-15">
-													<span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
-													<input type="text" class="form-control ps-15 bg-transparent" placeholder="Full Name">
-													@if ($errors->has('name'))
-														<span class="text-danger">{{ $errors->first('name') }}</span>
-													@endif
-												</div>
-											</div>
-											<div class="form-group">
-												<div class="input-group mb-15">
 													<span class="input-group-text bg-transparent"><i class="ti-email"></i></span>
-													<input type="email" class="form-control ps-15 bg-transparent" placeholder="Email">
+													<input type="email" class="form-control ps-15 bg-transparent" name="email" placeholder="Email" required>
 													@if ($errors->has('email'))
 														<span class="text-danger">{{ $errors->first('email') }}</span>
 													@endif
@@ -109,8 +113,27 @@
 											</div>
 											<div class="form-group">
 												<div class="input-group mb-15">
+													<span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
+													<input type="text" class="form-control ps-15 bg-transparent" name="name" id="name" onchange="makeusername()" placeholder="Full Name" required>
+													@if ($errors->has('name'))
+														<span class="text-danger">{{ $errors->first('name') }}</span>
+													@endif
+												</div>
+												<span class="text-danger text-center" id="username"></span>
+											</div>
+											<div class="form-group">
+												<div class="input-group mb-15">
+													<span class="input-group-text bg-transparent"><i class="ti-mobile"></i></span>
+													<input type="number" class="form-control ps-15 bg-transparent" id="phone" name="phone" onchange="makeusername()" placeholder="Phone" required>
+													@if ($errors->has('phone'))
+														<span class="text-danger">{{ $errors->first('phone') }}</span>
+													@endif
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="input-group mb-15">
 													<span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
-													<input type="password" class="form-control ps-15 bg-transparent" placeholder="Password">
+													<input type="password" class="form-control ps-15 bg-transparent" name="password" placeholder="Password" required>
 													@if ($errors->has('password'))
 														<span class="text-danger">{{ $errors->first('password') }}</span>
 													@endif
@@ -119,9 +142,30 @@
 											<div class="form-group">
 												<div class="input-group mb-15">
 													<span class="input-group-text bg-transparent"><i class="ti-lock"></i></span>
-													<input type="password" class="form-control ps-15 bg-transparent" placeholder="Retype Password" id="password_confirmation" name="password_confirmation">
+													<input type="password" class="form-control ps-15 bg-transparent"  placeholder="Retype Password" id="password_confirmation" name="password_confirmation" required>
+													@if ($errors->has('password_confirmation'))
+														<span class="text-danger">{{ $errors->first('password_confirmation') }}</span>
+													@endif
 												</div>
 											</div>
+											<?php
+											if (isset($_GET['type']) && $_GET['type']=='reg') { ?>
+													<input type="hidden" name="plan" value="<?= $_GET['plan_id']?>">
+											<?php }else{ ?>
+												<div class="form-group">
+													<div class="controls">
+														<select name="plan" id="select" required class="form-select">
+															<option value="">Select Your Plan</option>
+															@foreach ($plans as $plan)
+															<option value="<?= $plan->id; ?>"><?= $plan->name; ?></option>
+															@endforeach
+														</select>
+													</div>
+												</div>
+											<?php
+											}
+											?>
+											<input type="hidden" name="username" value="" id="user_name">
 											  <div class="row">
 												<div class="col-12">
 												  <div class="checkbox ms-5">
@@ -145,4 +189,14 @@
 			</div>
 		</div>			
 	</section>	
+@endsection
+@section('script')
+<script>
+function makeusername(){
+	var phone=$('#phone').val();
+	var name=$('#name').val();
+	$('#username').text('Your Username:' + name.substring(0, 3)+phone.substring(phone.length - 3));
+	$('#user_name').val(name.substring(0, 3)+phone.substring(phone.length - 3));
+}
+</script>
 @endsection

@@ -1,415 +1,63 @@
 @extends('admin.admin_master')
 @section('content')
+<!-- Main content -->
 <section class="content">
 			<div class="row">
-			  <div class="col-12">
-				<div class="box">
-					<div class="box-body">
-						<div class="table-responsive">
-						  <table id="example5" class="table table-hover">
-							<thead class="d-none">
-								<tr>
-									<th>&nbsp;</th>
-									<th>&nbsp;</th>
-									<th>&nbsp;</th>
-									<th>&nbsp;</th>
-									<th>&nbsp;</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/1.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/2.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/4.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/5.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/6.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/7.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/8.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/9.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/1.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/2.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/3.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/4.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/5.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/6.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/7.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">dummy@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-								<tr>
-									<td class="w-20"><i class="fa fa-square-o pt-15"></i></td>
-									<td class="w-20"><i class="fa fa-star text-primary pt-15"></i></td>
-									<td class="w-60">
-									  <a class="avatar avatar-lg status-success" href="#">
-										<img src="../images/avatar/8.jpg" alt="...">
-									  </a>
-									</td>
-									<td class="w-300">
-										<p class="mb-0">
-										  <a href="#"><strong>Maryam Amiri</strong></a>
-										  <small class="sidetitle">mike.stones@gmail.com</small>
-										</p>
-										<p class="mb-0">Designer</p>
-									</td>
-									<td>
-										<nav class="nav mt-2">
-										  <a class="nav-link" href="#"><i class="fa fa-facebook"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-github"></i></a>
-										  <a class="nav-link" href="#"><i class="fa fa-linkedin"></i></a>
-										</nav>
-									</td>
-								</tr>
-
-							</tbody>
-						  </table>
+				<div class="col-12">
+				  <div class="box">
+					<div class="box-header with-border">
+						<div class="row">
+							<div class="col-md-11">
+								<h4 class="box-title">Users</h4>
+							</div>
 						</div>
 					</div>
-				<!-- /.box-body -->
-			    </div>
-			  <!-- /.box -->
-			  </div>			
-			</div>
+					<div class="box-body">
+						@if(session('success'))
+						<div class="alert alert-success alert-dismissible fade show">
+							<strong>Success!</strong> {{ session('success') }}
+						</div>
+						@endif
+						<div class="table-responsive">
+							<table class="table table-striped table-bordered mb-0">
+							  <thead>
+								<tr>
+								   <th class="text-center">#</th>
+								   <th class="text-end">Name</th>
+								   <th class="text-end">Amount</th>
+								   <th class="text-end">Gram</th>
+								   <th class="text-end">Estimate Profit</th>
+								   <th class="text-end">Daily Percentage</th>
+								   <th class="text-end">Bonus</th>
+								   <th class="text-end">Community Bonus</th>
+								   <th class="text-end">Actions</th>
+								</tr>
+							   </thead>
+							   <tbody>
+								@foreach($users as $user)
+									<tr>
+									<td class="text-center"> {{ $loop->index + 1 }}</td>
+									<td class="text-center">{{$user->name}}</td>
+									<td class="text-end"><span>$</span>{{$user->amount}}</td>
+									<td class="text-end">{{$user->gram}} <span>Gram</span></td>
+									<td class="text-end"><span>$</span> {{$user->estimated_profit}}</td>
+									<td class="text-end">{{$user->percentage ?? 0}} <span>%</span></td>
+									<td class="text-end"><span>$</span>{{$user->bonu ?? 0}}</td>
+									<td class="text-end"><span>$</span>{{$user->community_bonus ?? 0}}</td>
+									<td class="text-end"><a class="btn btn-danger" href="{{ route('delete_user', ['user_id' => $user->id]) }}">Delete</a></td>
+									</tr>
+								@endforeach
+								
+							   </tbody>
+							</table>
+						</div>
+					</div>
+					<!-- /.box-body -->
+				  </div>
+				  <!-- /.box -->
+				</div>
+			  </div>
 		</section>
+		<!-- /.content -->
+		
 @endsection

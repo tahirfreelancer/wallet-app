@@ -13,87 +13,35 @@
 				</div>
 			</div>
 			<div class="row mt-30">
+				@foreach ($plans as $plan)
 				<div class="col-md-4 col-12">
 					<div class="price-table bg-gray-100">
 						<div class="price-top bg-white">
 							<div class="price-title">
-								<h3 class="mb-15">Basic</h3>
+								<h3 class="mb-15">{{$plan->name}}</h3>
 								<p>In this package dolor sit amet occaecat cupidatat non proident</p>
 							</div>
 							<div class="price-prize">
-								<h2>$49 /<span> month</span> </h2>
+								<h2>${{$plan->amount}} /<span> month</span> </h2>
 							</div>
 							<div class="price-button">
-								<a class="btn btn-primary" href="#">Get It Now</a>
+								<a class="btn btn-primary" href="{{ route('accounts', ['plan_id' => $plan->id, 'type' => 'reg']) }}">Get It Now</a>
 							</div>
 						</div>
 						<div class="price-content">
 							<div class="price-table-list">
 								<ul class="list-unstyled">
-									<li> <i class="fa fa-check"></i> 25 Analytics Campaign <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span></li>
-									<li><i class="fa fa-times"></i> Branded Reports <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-									<li><i class="fa fa-check"></i> 1,900 Keywords <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-									<li> <i class="fa fa-times"></i> 4 Social Account <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-									<li> <i class="fa fa-times"></i> Phone &amp; Email Support <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
+									<li> <i class="fa fa-check"></i> {{$plan->gram}} Gram Gold<span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Gold in Gram"><i class="fa fa-info"></i></span></li>
+									<li> <i class="fa fa-check"></i>Estimated Profit {{$plan->estimated_profit}}<span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Estimated Profit"><i class="fa fa-info"></i></span></li>
+									<li> <i class="fa fa-percent"></i>Daily Percentage {{$plan->daily_percentage}}<span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Daily Earning"><i class="fa fa-info"></i></span></li>
+									<li> <i class="fa fa-money"></i>Bonus {{$plan->bonus ?? 0}}<span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Bonus Amount"><i class="fa fa-info"></i></span></li>
+									<li> <i class="fa fa-money"></i>Community Bonus {{$plan->community_bonus ?? 0}}<span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Refral Bonus"><i class="fa fa-info"></i></span></li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-12">
-					<div class="price-table active bg-gray-100 pull-up">
-						<div class="price-top bg-white">
-							<div class="price-title">
-								<h3 class="mb-15">Standard </h3>
-								<p>Suitable for medium sit amet officia deserunt mollit anim id est laborum</p>
-							</div>
-							<div class="price-prize">
-								<h2>$129 /<span> month</span> </h2>
-							</div>
-							<div class="price-button">
-								<a class="btn btn-primary" href="#">Get It Now</a>
-							</div>
-						</div>
-						<div class="price-content">
-							<div class="price-table-list">
-								<ul class="list-unstyled">
-									<li> <i class="fa fa-check"></i> 25 Analytics Campaign <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span></li>
-									<li><i class="fa fa-check"></i> Branded Reports <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-									<li><i class="fa fa-check"></i> 1,900 Keywords <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-									<li> <i class="fa fa-check"></i> 4 Social Account <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-									<li> <i class="fa fa-check"></i> Phone &amp; Email Support <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-12">
-					<div class="price-table bg-gray-100">
-						<div class="price-top bg-white">
-							<div class="price-title">
-								<h3 class="mb-15">Premium</h3>
-								<p>Best for unlimited tempor incididunt ut labore et dolore magna aliqua</p>
-							</div>
-							<div class="price-prize">
-								<h2>$599 /<span> month</span> </h2>
-							</div>
-							<div class="price-button">
-								<a class="btn btn-primary" href="#">Get It Now</a>
-							</div>
-						</div>
-						<div class="price-content">
-							<div class="price-table-list">
-								<ul class="list-unstyled">
-									<li> <i class="fa fa-check"></i> 25 Analytics Campaign <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span></li>
-									<li><i class="fa fa-times"></i> Branded Reports <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-									<li><i class="fa fa-check"></i> 1,900 Keywords <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-									<li> <i class="fa fa-times"></i> 4 Social Account <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-									<li> <i class="fa fa-check"></i> Phone &amp; Email Support <span class="tooltip-content float-end" data-placement="top" data-bs-toggle="tooltip" data-original-title="Lorem ipsum dolor sit amet"><i class="fa fa-info"></i></span> </li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+				@endforeach
 			</div>
 		</div>
 	</section>	

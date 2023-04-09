@@ -20,7 +20,6 @@
 	<link rel="stylesheet" href="{{asset('admin/assets/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('admin/assets/css/skin_color.css')}}">
 	<link rel="stylesheet" href="{{asset('admin/assets/css/custom.css')}}">
-	<link rel="stylesheet" href="{{asset('admin/assets/css/custom.css')}}">
      
   </head>
 
@@ -72,29 +71,32 @@
 	<script src="{{asset('admin/assets/js/pages/chat-popup.js')}}"></script>
     <script src="{{asset('admin/assets/icons/feather-icons/feather.min.js')}}"></script>
 	
-	<script src="{{asset('admin/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js')}}"></script>
+	<!-- <script src="{{asset('admin/assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js')}}"></script> -->
 	<script src="{{asset('admin/assets/vendor_components/Flot/jquery.flot.js')}}"></script>
 	<script src="{{asset('admin/assets/vendor_components/Flot/jquery.flot.resize.js')}}"></script>
-	<script src="{{asset('admin/assets/vendor_components/Flot/jquery.flot.pie.js')}}"></script>
-	<script src="{{asset('admin/assets/vendor_components/Flot/jquery.flot.categories.js')}}"></script>
+	<!-- <script src="{{asset('admin/assets/vendor_components/Flot/jquery.flot.pie.js')}}"></script> -->
+	<!-- <script src="{{asset('admin/assets/vendor_components/Flot/jquery.flot.categories.js')}}"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.21.15/amcharts.js" integrity="sha512-PEzmoGmMqKKBVwfe025/Qs9fx7FHwfUzuAqUIwad/t10LOMkY/9ULED7/w8rzZ7FhhEDhmPKr1qs08sEB3bZoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="{{asset('admin/assets/js/patterns.js')}}"></script>
 	<script src="{{asset('admin/assets/js/gauge.js')}}"></script>
 	<script src="{{asset('admin/assets/js/serial.js')}}"></script>
 	<script src="{{asset('admin/assets/js/amstock.js')}}"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.21.15/plugins/dataloader/dataloader.min.js" integrity="sha512-KbH4UpNBSE0YTDPGvFyD7EEVGNadBtNzdTBO/kUBVnz+lHAgPY5noZNx5Wqz7+7HNE9tB8SIFacyNl+i3sviOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.21.15/plugins/dataloader/dataloader.min.js" integrity="sha512-KbH4UpNBSE0YTDPGvFyD7EEVGNadBtNzdTBO/kUBVnz+lHAgPY5noZNx5Wqz7+7HNE9tB8SIFacyNl+i3sviOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.21.15/plugins/animate/animate.min.js" integrity="sha512-HnCb5OSSzK8rDYWjieZT3wLwqaBkRI5FMxdTIQelCt4VKJzSAHhWuDgU0io45PRMP+8faNZ14U6LtHUaehm0aA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.21.15/plugins/export/export.min.js" integrity="sha512-VqM/gOsUoEugch+KWO8vXLU6JO747XxopC9dabT46kWz1Me0TR9wU6TRX+g4Qof2mbrPlAPiTTKSu8zXsFC/AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.21.15/plugins/export/export.min.js" integrity="sha512-VqM/gOsUoEugch+KWO8vXLU6JO747XxopC9dabT46kWz1Me0TR9wU6TRX+g4Qof2mbrPlAPiTTKSu8zXsFC/AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 	<script src="{{asset('admin/assets/js/vendors.min.js')}}"></script>
-	<script src="{{asset('admin/assets/js/pie.js')}}"></script>
+	<!-- <script src="{{asset('admin/assets/js/pie.js')}}"></script> -->
 	<script src="{{asset('admin/assets/js/light.js')}}"></script>
-	<script src="{{asset('admin/assets/vendor_components/Web-Ticker-master/jquery.webticker.min.js')}}"></script>
+	<!-- <script src="{{asset('admin/assets/vendor_components/Web-Ticker-master/jquery.webticker.min.js')}}"></script> -->
 	
 	<!-- Crypto Admin App -->
 	<script src="{{asset('admin/assets/js/template.js')}}"></script>
 	<script src="{{asset('admin/assets/js/pages/dashboard32.js')}}"></script>
-	<script src="{{asset('admin/assets/js/pages/dashboard32-chart.js')}}"></script>
-	<script src="{{asset('admin/assets/js/pages/widget-flot-charts.js')}}"></script>
+	<!-- <script src="{{asset('admin/assets/js/pages/dashboard32-chart.js')}}"></script>
+	<script src="{{asset('admin/assets/js/pages/widget-flot-charts.js')}}"></script> -->
+	<script src="{{asset('admin/assets/js/pages/validation.js')}}"></script>
+    <script src="{{asset('admin/assets/js/pages/form-validation.js')}}"></script>
+	@yield('script')
 	
 </body>
 </html>

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\Admin;
-use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\Authusers;
 
 
 /*
@@ -18,43 +18,30 @@ use App\Http\Controllers\Auth\LoginRegisterController;
 */
 
 // Main site Routes
-Route::get('/', [Home::class, 'index']);
-Route::get('/about', [Home::class, 'about']);
-Route::get('/plans', [Home::class, 'plans']);
-Route::get('/contact', [Home::class, 'contact']);
-Route::get('/faq', [Home::class, 'faq']);
+Route::get('/', [Home::class, 'index'])->name('index');
+Route::get('/about', [Home::class, 'about'])->name('about');
+Route::get('/plans', [Home::class, 'plans'])->name('plans');
+Route::get('/contact', [Home::class, 'contact'])->name('contact');
+Route::get('/faq', [Home::class, 'faq'])->name('faq');
 
 // Admin Routes
-Route::get('/dashboard', [Admin::class, 'dashboard']);
-Route::get('/users', [Admin::class, 'users']);
-Route::get('/plans', [Admin::class, 'plans']);
-Route::get('/runing', [Admin::class, 'runing']);
-Route::get('/withdraw', [Admin::class, 'withdraw']);
-Route::get('/history', [Admin::class, 'history']);
+Route::get('dashboard', [Admin::class, 'dashboard'])->name('dashboard');
+Route::get('users', [Admin::class, 'users'])->name('users');
+Route::get('dasboardplans', [Admin::class, 'dasboardplans'])->name('dasboardplans');;
+Route::get('runing', [Admin::class, 'runing'])->name('runing');
+Route::get('withdraw', [Admin::class, 'withdraw'])->name('withdraw');
+Route::get('history', [Admin::class, 'history'])->name('history');
 
 // Auth Routes
-Route::get('/lockscreen', [Admin::class, 'lockscreen']);
-Route::get('/accounts', [Home::class, 'accounts']);
-Route::post('logout', [LoginRegisterController::class, 'logout']);
-Route::post('authenticate', [LoginRegisterController::class, 'authenticate'])->name('authenticate');
-Route::post('store', [LoginRegisterController::class, 'store'])->name('store');
-// Route::post('/authenticate', [App\Http\Controllers\Auth\LoginRegisterController::class, 'authenticate'])->name('authenticate');
-// Route::post('/store', [App\Http\Controllers\Auth\LoginRegisterController::class, 'store'])->name('store');
+Route::get('lockscreen', [Admin::class, 'lockscreen'])->name('lockscreen');
+Route::get('accounts', [Home::class, 'accounts'])->name('accounts');
+Route::get('logout', [Authusers::class, 'logout'])->name('logout');
+Route::post('authenticate', [Authusers::class, 'authenticate'])->name('authenticate');
+Route::post('store', [Authusers::class, 'store'])->name('store');
+
+// Data storge
+Route::post('save_plan', [Admin::class, 'SavePlan'])->name('SavePlan');
+Route::get('delete_plan', [Admin::class, 'delete_plan'])->name('delete_plan');
+Route::get('delete_user', [Admin::class, 'delete_user'])->name('delete_user');
 
 
-
-
-
-
-
-
-
-// Auth Routes
-// Route::controller(LoginRegisterController::class)->group(function() {
-//     Route::get('/register', 'register')->name('register');
-//     Route::post('/store', 'store')->name('store');
-//     Route::get('/login', 'login')->name('login');
-//     Route::post('/authenticate', 'authenticate')->name('authenticate');
-//     Route::get('/dashboard', 'dashboard')->name('dashboard');
-//     Route::post('/logout', 'logout')->name('logout');
-// });

@@ -18,9 +18,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'plan_id',
         'name',
         'email',
         'password',
+        'phone',
+        'username'
     ];
 
     /**
@@ -41,4 +44,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // public function plans()
+    // {
+    //     return $this->hasOne(Plans::class);
+    // }
 }

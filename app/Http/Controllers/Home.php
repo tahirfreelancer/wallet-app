@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Plans;
 
 class Home extends Controller
 {
@@ -14,7 +15,11 @@ class Home extends Controller
     public function accounts()
     {
         $title = 'Register/Login';
-        return view('accounts',['title' => $title]);
+        $plans = Plans::all();
+        return view('accounts', [
+            'title' => $title,
+            'plans' => $plans
+        ]);
     }
     public function about()
     {
@@ -23,8 +28,12 @@ class Home extends Controller
     }
     public function plans()
     {
-        $title = 'Plans';
-        return view('plans',['title' => $title]);
+        $title = 'Our Plans';
+        $plans = Plans::all();
+        return view('plans', [
+            'title' => $title,
+            'plans' => $plans
+        ]);
     }
     public function faq()
     {
