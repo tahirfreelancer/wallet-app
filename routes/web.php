@@ -19,10 +19,11 @@ use App\Http\Controllers\Authusers;
 
 // Main site Routes
 Route::get('/', [Home::class, 'index'])->name('index');
-Route::get('/about', [Home::class, 'about'])->name('about');
-Route::get('/plans', [Home::class, 'plans'])->name('plans');
-Route::get('/contact', [Home::class, 'contact'])->name('contact');
-Route::get('/faq', [Home::class, 'faq'])->name('faq');
+Route::get('about', [Home::class, 'about'])->name('about');
+Route::get('plans', [Home::class, 'plans'])->name('plans');
+Route::get('contact', [Home::class, 'contact'])->name('contact');
+Route::get('faq', [Home::class, 'faq'])->name('faq');
+Route::get('myassets', [Home::class, 'myassets'])->name('myassets');
 
 // Admin Routes
 Route::get('dashboard', [Admin::class, 'dashboard'])->name('dashboard');

@@ -45,5 +45,9 @@ class Home extends Controller
         $title = 'Contact Us';
         return view('contact',['title' => $title]);
     }
-   
+    public function myassets()
+    {
+        $title = 'My Assets';
+        return view('myassets',['title' => $title]);
+    }
 }

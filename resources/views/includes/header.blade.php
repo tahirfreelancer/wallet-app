@@ -21,9 +21,19 @@
 				<li class="{{ Request::is('contact') ? 'active' : '' }}">
 					<a href="{{('contact')}}">Contact</a>
 				</li>
+				@if(auth()->check())
+					<li class="{{ Request::is('myassets') ? 'active' : '' }}">
+						<a href="{{('myassets')}}">My Assets</a>
+					</li>
+				@endif
 			</ul>
 			<ul class="attributes">
-				<li class="d-md-block d-none"><a href="{{('accounts')}}" class="px-10 pt-15 pb-10"><div class="btn btn-primary py-5">Register/Login</div></a></li>
+				@if(auth()->check())
+				<li class="d-md-block d-none"><a href="{{('logout')}}" class="px-10 pt-15 pb-10"><div class="btn btn-primary py-5">Logout</div></a></li>
+
+				@else:
+					<li class="d-md-block d-none"><a href="{{('accounts')}}" class="px-10 pt-15 pb-10"><div class="btn btn-primary py-5">Register/Login</div></a></li>
+				@endif
 			</ul>
 		</nav>
 	</header>
