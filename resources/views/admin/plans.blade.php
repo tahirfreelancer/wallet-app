@@ -27,30 +27,32 @@
 							<table class="table table-striped table-bordered mb-0">
 							  <thead>
 								<tr>
-								   <th class="text-center">#</th>
-								   <th class="text-end">Name</th>
-								   <th class="text-end">Amount</th>
-								   <th class="text-end">Gram</th>
-								   <th class="text-end">Estimate Profit</th>
-								   <th class="text-end">Daily Percentage</th>
-								   <th class="text-end">Bonus</th>
-								   <th class="text-end">Community Bonus</th>
-								   <th class="text-end">Action</th>
+								   <th >#</th>
+								   <th >Name</th>
+								   <th >Description</th>
+								   <th >Amount</th>
+								   <th >Gram</th>
+								   <th >Estimate Profit</th>
+								   <th >Daily Percentage</th>
+								   <th >Bonus</th>
+								   <th >Community Bonus</th>
+								   <th >Action</th>
 								</tr>
 							   </thead>
 							   <tbody>
 								@foreach($plans as $plan)
 									<tr>
-									<td class="text-center"> {{ $loop->index + 1 }}</td>
-									<td class="text-center">{{$plan->name}}</td>
-									<td class="text-end"><span>$</span>{{$plan->amount}}</td>
-									<td class="text-end">{{$plan->gram}} <span>Gram</span></td>
-									<td class="text-end"><span>$</span> {{$plan->estimated_profit}}</td>
-									<td class="text-end">{{$plan->daily_perecntage ?? 0}} <span>%</span></td>
-									<td class="text-end"><span>$</span>{{$plan->bonu ?? 0}}</td>
-									<td class="text-end"><span>$</span>{{$plan->community_bonus ?? 0}}</td>
-									<td class="text-end">
-										<button class="btn btn-info btn-sm edit" data-id="{{$plan->id}}"  data-name="{{$plan->name}}"  data-amount="{{$plan->amount}}"  data-gram="{{$plan->gram}}"  data-estimated_profit="{{$plan->estimated_profit}}" data-percentage="{{$plan->daily_perecntage}}" data-bonus="{{$plan->bonus}}" data-community_bonus="{{$plan->community_bonus}}"> Edit </button>
+									<td > {{ $loop->index + 1 }}</td>
+									<td >{{$plan->name}}</td>
+									<td >{{$plan->description}}</td>
+									<td ><span>$</span>{{$plan->amount}}</td>
+									<td >{{$plan->gram}} <span>Gram</span></td>
+									<td ><span>$</span> {{$plan->estimated_profit}}</td>
+									<td >{{$plan->daily_perecntage ?? 0}} <span>%</span></td>
+									<td ><span>$</span>{{$plan->bonu ?? 0}}</td>
+									<td ><span>$</span>{{$plan->community_bonus ?? 0}}</td>
+									<td >
+										<button class="btn btn-info btn-sm edit" data-id="{{$plan->id}}"  data-name="{{$plan->name}}" data-description="{{$plan->description}}"  data-amount="{{$plan->amount}}"  data-gram="{{$plan->gram}}"  data-estimated_profit="{{$plan->estimated_profit}}" data-percentage="{{$plan->daily_perecntage}}" data-bonus="{{$plan->bonus}}" data-community_bonus="{{$plan->community_bonus}}"> Edit </button>
 										<a class="btn btn-danger btn-sm" href="{{ route('delete_plan', ['plan_id' => $plan->id]) }}">Delete</a>
 									</td>
 									</tr>
@@ -81,6 +83,12 @@
 								<h5>Plan Name <span class="text-danger">*</span></h5>
 								<div class="controls">
 									<input type="text" name="plan_name" id="plan_name" class="form-control" required data-validation-required-message="This field is required"> 
+								</div>
+							</div>
+							<div class="form-group">
+								<h5>Description <span class="text-danger">*</span></h5>
+								<div class="controls">
+									<input type="text" name="description" id="description" class="form-control" required data-validation-required-message="This field is required"> 
 								</div>
 							</div>
 							<div class="form-group">
@@ -154,6 +162,8 @@
     var bonus = $(this).data('bonus');
     var community_bonus = $(this).data('community_bonus');
     var id = $(this).data('id');
+    var description = $(this).data('description');
+	
 
 	console.log(modal);
     // Set the data in the modal
@@ -165,6 +175,8 @@
     $('#bonus').val(bonus);
     $('#community_bonus').val(community_bonus);
     $('#id').val(id);
+    $('#description').val(description);
+	
 
     // Display the modal
     $('#planmodal').css('display', 'block');

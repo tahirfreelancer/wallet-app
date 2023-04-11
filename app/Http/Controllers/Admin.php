@@ -55,6 +55,7 @@ class Admin extends Controller
         if($request->id==''){
             Plans::create([
                 'name' => $request->plan_name,
+                'description' => $request->description,
                 'amount' => $request->amount,
                 'gram' => $request->grams,
                 'estimated_profit' => $request->estimated_profit,
@@ -67,6 +68,7 @@ class Admin extends Controller
         }else{
             $plans = Plans::find($request->id);
             $plans->name = $request->input('plan_name');
+            $plans->description = $request->input('description');
             $plans->amount = $request->input('amount');
             $plans->gram = $request->input('grams');
             $plans->estimated_profit = $request->input('estimated_profit');

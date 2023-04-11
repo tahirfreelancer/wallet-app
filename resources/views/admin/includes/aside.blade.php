@@ -5,48 +5,78 @@
 		  <div class="multinav-scroll" style="height: 100%;">	
 			  <!-- sidebar menu-->
 			  <ul class="sidebar-menu" data-widget="tree">
-				<li>
-				  <a href="{{ url('dashboard')}}">
-					<i class="glyphicon glyphicon-dashboard"></i>
-					<span>Dashboard</span>
-				  </a>
-				</li>  	 
-				<li>
-				  <a href="{{ url('users')}}">
-					<i class="glyphicon glyphicon-user"></i>
-					<span>Users</span>
-				  </a>
-				</li>  
-				<li>
-				  <a href="{{ url('dasboardplans')}}">
-					<i class="glyphicon glyphicon-list-alt"></i>
-					<span>Plans</span>
-				  </a>
-				</li>
-				<li>
-				  <a href="{{ url('runing')}}">
-					<i class="glyphicon glyphicon-bullhorn"></i>
-					<span>Running Compaigns</span>
-				  </a>
-				</li>	
-				<li>
-				  <a href="{{ url('withdraw')}}">
-					<i class="glyphicon glyphicon-xbt"></i>
-					<span>withdrawal Requests</span>
-				  </a>
-				</li>  
-				<li>
-				  <a href="{{ url('history')}}">
-					<i class="glyphicon glyphicon-flag"></i>
-					<span>History </span>
-				  </a>
-				</li>  
-				<li>
-				  <a href="{{ url('logout')}}">
-					<i class="glyphicon glyphicon-off"></i>
-					<span>logout </span>
-				  </a>
-				</li>      
+			  	@if ( Auth::user()->name!='admin')
+				 	<li>
+						<a href="{{ url('clients_dashboard')}}">
+							<i class="glyphicon glyphicon-dashboard"></i>
+							<span>Dashboard</span>
+						</a>
+					</li> 
+					<li>
+						<a href="{{ url('withdraw')}}">
+							<i class="glyphicon glyphicon-xbt"></i>
+							<span>withdrawal Requests</span>
+						</a>
+					</li>
+					<li>
+						<a href="{{ url('history')}}">
+							<i class="glyphicon glyphicon-flag"></i>
+							<span>History </span>
+						</a>
+					</li>  
+					<li>
+						<a href="{{ url('logout')}}">
+							<i class="glyphicon glyphicon-off"></i>
+							<span>logout </span>
+						</a>
+					</li> 
+					
+				@else:
+					<li>
+						<a href="{{ url('dashboard')}}">
+							<i class="glyphicon glyphicon-dashboard"></i>
+							<span>Dashboard</span>
+						</a>
+					</li>  	 
+					<li>
+						<a href="{{ url('users')}}">
+							<i class="glyphicon glyphicon-user"></i>
+							<span>Users</span>
+						</a>
+					</li>  
+					<li>
+						<a href="{{ url('dasboardplans')}}">
+							<i class="glyphicon glyphicon-list-alt"></i>
+							<span>Plans</span>
+						</a>
+					</li>
+					<li>
+						<a href="{{ url('runing')}}">
+							<i class="glyphicon glyphicon-bullhorn"></i>
+							<span>Running Compaigns</span>
+						</a>
+					</li>	
+					<li>
+						<a href="{{ url('withdraw')}}">
+							<i class="glyphicon glyphicon-xbt"></i>
+							<span>withdrawal Requests</span>
+						</a>
+					</li>  
+					<li>
+						<a href="{{ url('history')}}">
+							<i class="glyphicon glyphicon-flag"></i>
+							<span>History </span>
+						</a>
+					</li>  
+					<li>
+						<a href="{{ url('logout')}}">
+							<i class="glyphicon glyphicon-off"></i>
+							<span>logout </span>
+						</a>
+					</li>   
+				@endif
+
+			   
 			  </ul>
 			  
 			  <div class="sidebar-widgets">

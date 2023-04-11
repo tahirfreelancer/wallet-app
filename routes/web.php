@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\Authusers;
+use App\Http\Controllers\Clients;
+
 
 
 /*
@@ -44,5 +46,12 @@ Route::post('store', [Authusers::class, 'store'])->name('store');
 Route::post('save_plan', [Admin::class, 'SavePlan'])->name('SavePlan');
 Route::get('delete_plan', [Admin::class, 'delete_plan'])->name('delete_plan');
 Route::get('delete_user', [Admin::class, 'delete_user'])->name('delete_user');
+
+// clients routes
+Route::get('clients_dashboard', [Clients::class, 'clients_dashboard'])->name('clients_dashboard');
+Route::get('withdrawal_request', [Clients::class, 'withdrawal_request'])->name('withdrawal_request');
+Route::get('withdrawal_history', [Clients::class, 'withdrawal_history'])->name('withdrawal_history');
+
+
 
 
